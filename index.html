@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>никому не нужен ваш вебсайт</title>
+<meta name="description" content="Визуальное исследование: как двадцать дизайн-студий теряют контроль над своим изображением — на телефоне и в карточке ссылки. Данные и код открыты.">
+<link rel="canonical" href="https://nobody.specialforhse.ru/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nobody.specialforhse.ru/">
+<meta property="og:title" content="Никому не нужен ваш вебсайт">
+<meta property="og:description" content="Двадцать дизайн-студий, три шага от сайта к зрителю. Доля цвета: 24% на сайте, 18% на телефоне, 0% в карточке ссылки.">
+<meta property="og:image" content="https://nobody.specialforhse.ru/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+  :root { --ink: #161615; --grey: #8a877f; --line: #e4e1da; --accent: #d9531e; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font: 14px/1.6 "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+    padding: 48px max(16px, env(safe-area-inset-right)) 64px max(16px, env(safe-area-inset-left));
+  }
+  main { max-width: 680px; }
+  h1 { font-size: 14px; font-weight: 700; margin: 0; }
+  h2 { font-size: 14px; font-weight: 700; margin: 48px 0 12px; }
+  p, ul, ol, table, pre { margin: 0 0 12px; }
+  ul, ol { padding-left: 3ch; }
+  li { margin: 0 0 4px; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .muted { color: var(--grey); }
+  nav { margin: 24px 0 0; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .line { font-size: 28px; line-height: 1.2; margin: 24px 0 8px; }
+  .line b { color: var(--accent); font-weight: 400; }
+  .wrap { overflow-x: auto; margin: 0 0 12px; }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 4px 16px 4px 0; border-bottom: 1px solid var(--line); vertical-align: top; white-space: nowrap; }
+  th { font-weight: 400; color: var(--grey); }
+  pre { background: #f6f5f2; padding: 12px 14px; overflow-x: auto; font: inherit; line-height: 1.5; }
+  code { font: inherit; }
+  dt { font-weight: 700; }
+  dd { margin: 0 0 10px; }
+  footer { margin: 64px 0 0; color: var(--grey); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>никому не нужен ваш вебсайт</h1>
+<p>деавторизация цифровых представительств дизайн-студии</p>
+
+<nav>
+  <a href="#about">о чём</a>
+  <a href="#studios">студии</a>
+  <a href="#protocol">протокол</a>
+  <a href="#code">код</a>
+  <a href="#data">данные</a>
+  <a href="https://github.com/rdnve/nobody-visual-research">github</a>
+</nav>
+
+<h2 id="about">о чём</h2>
+<p>Сайт дизайн-студии — редкий случай, когда автор контролирует всё: какой кейс встретит посетителя, каким цветом и в каком порядке. Но всё реже этот сайт видят таким, каким его задумали. Студию находят в телефоне, где экран вчетверо меньше. Её присылают ссылкой, и вместо первого экрана человек получает карточку, которую мессенджер собрал из нескольких строк кода.</p>
+<p>Исследование называет этот процесс деавторизацией: сайт остаётся, но решения о том, как его увидят, принимаются уже не в студии.</p>
+<p><b>Ключевой вопрос:</b> остаётся ли дизайн-студия автором своего изображения, когда её сайт видят не целиком и не на большом экране?</p>
+<p><b>Гипотеза:</b> чем дальше изображение студии уходит от её сайта, тем меньше в нём авторских решений. Три условия — три главы:</p>
+<ol>
+  <li><b>заходи</b> — первый экран на десктопе. «Своего мало даже на десктопе» — не подтвердилось: своего больше половины экрана у 12 студий из 20.</li>
+  <li><b>листай</b> — тот же экран на телефоне. «Студии становятся похожи друг на друга» — подтвердилось: разброс палитр падает со 100 до 77.</li>
+  <li><b>делись</b> — карточка ссылки в мессенджере. «От студии остаётся только то, что она прописала в коде» — подтвердилось: ни одна карточка не показывает работу студии.</li>
+</ol>
+<p class="line">24% <b>></b> 18% <b>></b> 0%</p>
+<p class="muted">медиана доли цветного: сайт на десктопе > сайт на телефоне > картинка карточки ссылки</p>
+
+<h2 id="studios">студии</h2>
+<p>Двадцать студий из четырёх стран, по пять из каждой: первые места национальных рейтингов, призёры фестивалей, студии из отраслевых каталогов. Номер сквозной для всей книги.</p>
+<div class="wrap">
+<table>
+  <thead><tr><th>№</th><th>студия</th><th>страна</th><th>сайт</th></tr></thead>
+  <tbody>
+    <tr><td>01</td><td>Depot</td><td>Россия</td><td><a href="https://www.depotwpf.ru">depotwpf.ru</a></td></tr>
+    <tr><td>02</td><td>Студия Артемия Лебедева</td><td>Россия</td><td><a href="https://www.artlebedev.ru">artlebedev.ru</a></td></tr>
+    <tr><td>03</td><td>Ony</td><td>Россия</td><td><a href="https://ony.ru">ony.ru</a></td></tr>
+    <tr><td>04</td><td>Ответ</td><td>Россия</td><td><a href="https://otvetdesign.ru">otvetdesign.ru</a></td></tr>
+    <tr><td>05</td><td>Dotorg</td><td>Россия</td><td><a href="https://dotorg.ru">dotorg.ru</a></td></tr>
+    <tr><td>06</td><td>Desique</td><td>Казахстан</td><td><a href="https://desique.kz">desique.kz</a></td></tr>
+    <tr><td>07</td><td>Fingers</td><td>Казахстан</td><td><a href="https://fingers.kz">fingers.kz</a></td></tr>
+    <tr><td>08</td><td>Djam</td><td>Казахстан</td><td><a href="https://djam.kz">djam.kz</a></td></tr>
+    <tr><td>09</td><td>Boost</td><td>Казахстан</td><td><a href="https://boost.com.kz">boost.com.kz</a></td></tr>
+    <tr><td>10</td><td>Brainteam</td><td>Казахстан</td><td><a href="https://brainteam.kz">brainteam.kz</a></td></tr>
+    <tr><td>11</td><td>Mano</td><td>Узбекистан</td><td><a href="https://manobranding.uz">manobranding.uz</a></td></tr>
+    <tr><td>12</td><td>Naked Eye</td><td>Узбекистан</td><td><a href="https://www.nakedeye.uz">nakedeye.uz</a></td></tr>
+    <tr><td>13</td><td>Synthesis</td><td>Узбекистан</td><td><a href="https://synthesis.uz">synthesis.uz</a></td></tr>
+    <tr><td>14</td><td>360</td><td>Узбекистан</td><td><a href="https://threesixty.uz">threesixty.uz</a></td></tr>
+    <tr><td>15</td><td>Lokals</td><td>Узбекистан</td><td><a href="https://lokals.uz">lokals.uz</a></td></tr>
+    <tr><td>16</td><td>Fabula</td><td>Беларусь</td><td><a href="https://fabulabranding.com">fabulabranding.com</a></td></tr>
+    <tr><td>17</td><td>PG Branding</td><td>Беларусь</td><td><a href="https://pgr.by">pgr.by</a></td></tr>
+    <tr><td>18</td><td>Limb</td><td>Беларусь</td><td><a href="https://limb.by">limb.by</a></td></tr>
+    <tr><td>19</td><td>NZR</td><td>Беларусь</td><td><a href="https://nzr.by">nzr.by</a></td></tr>
+    <tr><td>20</td><td>DA Design</td><td>Беларусь</td><td><a href="http://mur.by">mur.by</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="protocol">протокол</h2>
+<p>Все двадцать сайтов сняты одним скриптом в один день — 11.11.2026. Снималась только главная страница.</p>
+<ul>
+  <li>десктоп — окно 1440 × 900, снимок в 2×;</li>
+  <li>телефон — окно 390 × 844, как у iPhone 13, снимок в 3×;</li>
+  <li>съёмка начинается через 3 секунды после загрузки;</li>
+  <li>10 кадров, ровно по одному в секунду;</li>
+  <li>плашки куки, окна чатов и другие всплывающие элементы не закрываются: их видит каждый новый посетитель.</li>
+</ul>
+<p>Почему десять секунд: в первые секунды визита вероятность ухода со страницы выше всего; если человек остался после десяти, скорее всего, он задержится надолго (<a href="https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">Nielsen, 2011</a>).</p>
+<dl>
+  <dt>доля кадра</dt>
+  <dd>Первый экран делится сеткой: 20 × 12 клеток на десктопе, 10 × 22 на телефоне. Каждая клетка размечается вручную как «своё» (работа, текст и знак студии), «чужое» (плашки куки, виджеты, элементы платформ) или «пустота».</dd>
+  <dt>цвет</dt>
+  <dd>Кадры 2–10 переводятся в OKLab. Пиксели с цветностью ниже 0,045 считаются нейтральными. Для каждой студии считаются доля цветного и палитра из трёх нейтральных и четырёх цветных тонов. Разброс палитр — среднее расстояние между палитрами всех пар студий; десктоп принят за 100.</dd>
+  <dt>карточка ссылки</dt>
+  <dd>Из кода главной страницы берутся og:image, og:title и og:description. Где тега нет, берётся то, что подставит мессенджер: заголовок вкладки и meta description. Карточки в книге — реконструкция по коду, а не скриншоты из мессенджеров.</dd>
+</dl>
+
+<h2 id="code">код</h2>
+<p>Всё лежит в репозитории <a href="https://github.com/rdnve/nobody-visual-research">github.com/rdnve/nobody-visual-research</a>.</p>
+<div class="wrap">
+<table>
+  <tbody>
+    <tr><td><a href="https://github.com/rdnve/nobody-visual-research/blob/HEAD/capture.py">capture.py</a></td><td>съёмка: скриншоты, 10 кадров, раскадровки, код страницы, теги карточки, тип движения</td></tr>
+    <tr><td><a href="https://github.com/rdnve/nobody-visual-research/blob/HEAD/color.py">color.py</a></td><td>цвет по одиночным скриншотам: доля цветного, палитры, разброс</td></tr>
+    <tr><td><a href="https://github.com/rdnve/nobody-visual-research/blob/HEAD/color9.py">color9.py</a></td><td>цвет по кадрам 2–10 — эти числа стоят в книге; палитры в SVG, PDF, PNG</td></tr>
+    <tr><td><a href="https://github.com/rdnve/nobody-visual-research/blob/HEAD/studios.csv">studios.csv</a></td><td>список студий: номер, имя, адрес, страна, основание отбора</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><b>установка</b> — один раз, нужны Python 3.12 и poetry 1.8.5:</p>
+<pre><code>$ poetry install
+$ poetry run playwright install chromium
+$ poetry shell</code></pre>
+
+<p><b>съёмка</b>:</p>
+<pre><code># все студии из studios.csv
+$ python capture.py
+
+# только 01 и 08                       
+$ python capture.py --only 01,08          
+
+# с видимым окном браузера
+$ python capture.py --headed              
+
+# доснять папку прошлого дня
+$ python capture.py --out capture-2026-11-11
+
+# без прокси
+$ python capture.py --proxy none          </code></pre>
+<p>Скрипт создаёт папку с датой съёмки. Уже снятые студии повторно не снимаются, так что прерванную съёмку можно просто запустить снова. Двадцать студий снимаются за 15–25 минут. <code>--headed</code> нужен, если вместо сайта пустая страница или «проверка браузера». По умолчанию прокси берётся из настроек macOS; пароль прокси не печатается и не попадает в таблицу.</p>
+
+<p><b>цвет</b>:</p>
+<pre><code># по кадрам 2–10, как в книге
+$ python color9.py capture-2026-11-11     
+
+# по одиночным скриншотам
+$ python color.py capture-2026-11-11     </code></pre>
+
+<p><b>что получится</b>:</p>
+<pre><code>capture-2026-11-11/
+  shots/         первые экраны: десктоп, телефон, картинка карточки
+  frames/        по 10 кадров десктопа и телефона
+  html/          код главной страницы на дату съёмки
+  data.csv       одна строка на студию, разделитель — точка с запятой
+  colors9.csv    доля цветного и палитры по кадрам 2–10
+  spread9.csv    разброс палитр, десктоп = 100
+  palettes9/     палитры в SVG, PDF и PNG</code></pre>
+<p class="muted">Скриншоты сайтов в репозиторий не выложены: это чужие изображения. Их можно получить заново тем же скриптом — но сайты меняются, и результат будет уже другим.</p>
+
+<h2 id="data">данные</h2>
+<ul>
+  <li><a href="https://github.com/rdnve/nobody-visual-research/blob/HEAD/data/svodka.csv">data/svodka.csv</a> — все числа книги: своё, чужое и пустота на десктопе и телефоне, доля цветного на десктопе, телефоне и в карточке, теги карточки;</li>
+  <li><a href="https://github.com/rdnve/nobody-visual-research/blob/HEAD/data/capture-data.csv">data/capture-data.csv</a> — полная таблица съёмки: теги, заголовки, движение, robots.txt и прочее.</li>
+</ul>
+
+<h2>ограничения</h2>
+<ul>
+  <li>Двадцать студий — не статистика, а ряд для сравнения: выводы показывают тенденцию, а не закон.</li>
+  <li>Сайты сняты один раз. Первый экран Depot и Студии Лебедева меняется при каждом заходе, у Limb и PG Branding сначала показывается заставка загрузки. Lokals из России не открывается и снят через прокси.</li>
+  <li>Окно телефона — 390 × 844 по протоколу. В настоящем браузере часть экрана занимает адресная строка.</li>
+</ul>
+
+<footer>
+  <p>2026 / <a href="https://www.specialforhse.ru/">specialforhse.ru</a>  / <a href="https://www.serezha.co/">serezha.co</a> / <a href="https://github.com/rdnve/nobody-visual-research">github</a></p>
+</footer>
+
+</main>
+</body>
+</html>

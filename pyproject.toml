@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "nobody-visual-research"
+version = "0.0.1"
+description = "Visual research HSE"
+authors = ["Sergey Kutlyev <sakutlyev@edu.hse.ru>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "~3.12"
+playwright = "~1.65"
+numpy = "~2.5"
+pillow = "~13"
+reportlab = "~5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
